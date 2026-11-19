@@ -1,79 +1,47 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Google</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d1118">
+  <meta name="description" content="آریا؛ دروازه‌ای ایرانی برای جست‌وجوی وب.">
+  <title>آریا — جست‌وجوی ایرانی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href=#>About</a></li>
-        <li><a href=#>Store</a></li>
-      </ul>
-      <ul>
-        <li><a class="small-text" href=#>Gmail</a></li>
-        <li><a class="small-text" href=#>Images</a></li>
-        <li class="menu-bg"><img
-          class="menu-button"
-          src="images/menu.png"
-          alt="menu button">
-        </li>
-        <li><img
-          class="profile-pic"
-          src="images/profile.png"
-          alt="profile pic">
-        </li>
-      </ul>
-    </nav>
+  <div class="backdrop" id="backdrop"></div><div class="shade"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="آریا">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><path d="M50 8 59 24 77 19 71 35 88 42 72 51 85 68 64 65 59 85 50 72 41 85 36 65 15 68 28 51 12 42 29 35 23 19 41 24Z"/><path d="M50 22V69M34 39 50 48 66 39M31 57 50 64 69 57"/><circle cx="50" cy="39" r="5"/></svg>
+      </span><span class="brand-name">آریا</span><span class="brand-sub">ARYA</span>
+    </a>
+    <nav class="top-links"><a href="#about">درباره آریا</a><a href="#shortcuts">دسترسی سریع</a><button class="icon-btn" id="themeBtn" aria-label="تغییر تم" title="تغییر حالت">◐</button></nav>
   </header>
-
-  <section class="search-wrapper">
-    <img
-      class="logo"
-      src="images/logo.png"
-      alt="logo">
-    <form>
-      <img
-        class="search"
-        src="images/search.png">
-      <img
-        class="mic"
-        src="images/mic.png">
-      <input type="text">
-      <div class="buttons">
-        <button type="button">Google Search</button>
-        <button type="button">I'm Feeling Lucky</button>
-      </div>
+  <main class="hero">
+    <div class="time-block"><div id="clock">--:--</div><div id="date">...</div><p class="greeting" id="greeting">روزت روشن</p></div>
+    <div class="hero-title"><span class="title-symbol">✦</span><h1>آریا</h1><p>دروازه‌ای به جهان دانش، با ریشه‌های ایرانی</p></div>
+    <form class="search" id="searchForm">
+      <button type="submit" class="search-submit" aria-label="جستجو"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.7"/><path d="m16 16 5 5"/></svg></button>
+      <input id="query" type="search" autocomplete="off" placeholder="جست‌وجو کن یا آدرس بنویس…" aria-label="عبارت جستجو">
+      <button type="button" id="engineBtn" class="engine" title="انتخاب موتور جستجو">Google <span>⌄</span></button>
+      <div class="engine-menu" id="engineMenu"><button type="button" data-engine="Google">Google</button><button type="button" data-engine="Bing">Bing</button><button type="button" data-engine="DuckDuckGo">DuckDuckGo</button><button type="button" data-engine="Brave">Brave</button></div>
     </form>
-  </section>
-
-  <footer>
-    <div class="panel">
-      <p>iran</p>
-    </div>
-    <div class="panel">
-      <ul>
-        <li><a href=#>Advertising</a></li>
-        <li><a href=#>Business</a></li>
-        <li><a href=#>How Search Works</a></li>
-      </ul>
-      <div class="carbon">
-        <img
-          class="leaf"
-          src="images/leaf.png"
-          alt="leaf">
-        <a href=#>Carbon neutral since 2025</a>
-      </div>
-      <ul class="right">
-        <li><a href=#>Privacy</a></li>
-        <li><a href=#>Terms</a></li>
-        <li><a href=#>Settings</a></li>
-      </ul>
-    </div>
-  </footer>
-
-</body>
-</html>
+    <section class="shortcut-area" id="shortcuts"><div class="section-label">دسترسی سریع <span>·</span> QUICK LINKS</div><div class="shortcut-grid" id="shortcutGrid">
+      <a class="shortcut" href="https://www.aparat.com"><span class="shortcut-icon red">▶</span><span>آپارات</span></a>
+      <a class="shortcut" href="https://www.digikala.com"><span class="shortcut-icon pink">D</span><span>دیجی‌کالا</span></a>
+      <a class="shortcut" href="https://www.wikipedia.org"><span class="shortcut-icon white">W</span><span>ویکی‌پدیا</span></a>
+      <a class="shortcut" href="https://www.github.com"><span class="shortcut-icon dark">⌘</span><span>گیت‌هاب</span></a>
+      <a class="shortcut" href="https://www.youtube.com"><span class="shortcut-icon red">▷</span><span>یوتیوب</span></a>
+      <button class="shortcut add-shortcut" id="addShortcut"><span class="shortcut-icon plus">＋</span><span>افزودن</span></button>
+    </div></section>
+    <div class="bottom-note"><span class="spark">✧</span> ساخته‌شده با الهام از ایران <span class="spark">✧</span></div>
+  </main>
+  <footer><span id="backgroundCredit">تصویر پس‌زمینه</span><button id="changeBg">تصویر بعدی ↻</button><span class="footer-sep">|</span><a href="#about">درباره پروژه</a></footer>
+  <dialog id="shortcutDialog"><form method="dialog" class="dialog-card"><button class="dialog-close" aria-label="بستن">×</button><h3>میانبر جدید</h3><label>نام سایت<input id="siteName" placeholder="مثلاً دیوار" required></label><label>آدرس سایت<input id="siteUrl" type="url" placeholder="https://example.com" required></label><div class="dialog-actions"><button class="cancel">انصراف</button><button class="save" id="saveShortcut" type="button">ذخیره میانبر</button></div></form></dialog>
+  <dialog id="aboutDialog"><div class="dialog-card about"><button class="dialog-close" id="closeAbout">×</button><div class="mini-mark">✦</div><h3>آریا · ARYA</h3><p>یک تجربه جست‌وجوی ساده، مدرن و الهام‌گرفته از فرهنگ ایرانی. آریا در حال توسعه است؛ این نسخه یک نمونه رابط کاربری و صفحه شروع وب محسوب می‌شود.</p><small>نسخه ۰.۱ · Open-source concept</small></div></dialog>
+  <script src="assets/js/app.js"></script>
+</body></html>
