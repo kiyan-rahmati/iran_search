@@ -1,50 +1,55 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0d1118">
-  <meta name="description" content="آریا؛ دروازه‌ای ایرانی برای جست‌وجوی وب.">
-  <title>آریا — جست‌وجوی ایرانی</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ایران سرچ؛ جستجوی هوشمند با طعم ایران" />
+  <title>ایران سرچ | جستجوی هوشمند</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+  <div class="page-shell">
+    <header class="topbar container">
+      <a class="brand" href="#top" aria-label="ایران سرچ">
+        <span class="brand-mark"><span>𓂀</span></span>
+        <span><strong>ایران</strong><em>Search</em></span>
+      </a>
+      <nav class="main-nav" aria-label="ناوبری اصلی">
+        <a class="active" href="#top">خانه</a><a href="#search">تصاویر</a><a href="#search">ویدیو</a><a href="#news">اخبار</a><a href="#widgets">نقشه</a><a href="#more">بیشتر <small>⌄</small></a>
+      </nav>
+      <div class="header-actions"><button class="icon-btn" id="themeToggle" title="حالت شب" aria-label="تغییر حالت شب">☾</button><button class="profile-chip" id="profileToggle"><span class="avatar">ک</span><span class="profile-name">کیان رحمتی</span><span>⌄</span></button></div>
+    </header>
 
-  <div class="backdrop" id="backdrop"></div><div class="shade"></div>
-  
-  <header class="topbar">
-    <a class="brand" href="#" aria-label="آریا">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 100 100"><path d="M50 8 59 24 77 19 71 35 88 42 72 51 85 68 64 65 59 85 50 72 41 85 36 65 15 68 28 51 12 42 29 35 23 19 41 24Z"/><path d="M50 22V69M34 39 50 48 66 39M31 57 50 64 69 57"/><circle cx="50" cy="39" r="5"/></svg>
-      </span><span class="brand-name">آریا</span><span class="brand-sub">ARYA</span>
-    </a>
-    <nav class="top-links"><a href="#about">درباره آریا</a><a href="#shortcuts">دسترسی سریع</a><button class="icon-btn" id="themeBtn" aria-label="تغییر تم" title="تغییر حالت">◐</button></nav>
-  </header>
-  <main class="hero">
-    <div class="time-block"><div id="clock">--:--</div><div id="date">...</div><p class="greeting" id="greeting">روزت روشن</p></div>
-    <div class="hero-title"><span class="title-symbol">✦</span><h1>آریا</h1><p>دروازه‌ای به جهان دانش، با ریشه‌های ایرانی</p></div>
-    <form class="search" id="searchForm">
-      <button type="submit" class="search-submit" aria-label="جستجو"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.7"/><path d="m16 16 5 5"/></svg></button>
-      <input id="query" type="search" autocomplete="off" placeholder="جست‌وجو کن یا آدرس بنویس…" aria-label="عبارت جستجو">
-      <button type="button" id="engineBtn" class="engine" title="انتخاب موتور جستجو">Google <span>⌄</span></button>
-      <div class="engine-menu" id="engineMenu"><button type="button" data-engine="Google">Google</button><button type="button" data-engine="Bing">Bing</button><button type="button" data-engine="DuckDuckGo">DuckDuckGo</button><button type="button" data-engine="Brave">Brave</button></div>
-    </form>
-    <section class="shortcut-area" id="shortcuts"><div class="section-label">دسترسی سریع <span>·</span> QUICK LINKS</div><div class="shortcut-grid" id="shortcutGrid">
-      <a class="shortcut" href="https://www.aparat.com"><span class="shortcut-icon red">▶</span><span>آپارات</span></a>
-      <a class="shortcut" href="https://www.digikala.com"><span class="shortcut-icon pink">D</span><span>دیجی‌کالا</span></a>
-      <a class="shortcut" href="https://www.wikipedia.org"><span class="shortcut-icon white">W</span><span>ویکی‌پدیا</span></a>
-      <a class="shortcut" href="https://www.github.com"><span class="shortcut-icon dark">⌘</span><span>گیت‌هاب</span></a>
-      <a class="shortcut" href="https://www.youtube.com"><span class="shortcut-icon red">▷</span><span>یوتیوب</span></a>
-      <button class="shortcut add-shortcut" id="addShortcut"><span class="shortcut-icon plus">＋</span><span>افزودن</span></button>
-    </div></section>
-    <div class="bottom-note"><span class="spark">✧</span> ساخته‌شده با الهام از ایران <span class="spark">✧</span></div>
-  </main>
-  <footer><span id="backgroundCredit">تصویر پس‌زمینه</span><button id="changeBg">تصویر بعدی ↻</button><span class="footer-sep">|</span><a href="#about">درباره پروژه</a></footer>
-  <dialog id="shortcutDialog"><form method="dialog" class="dialog-card"><button class="dialog-close" aria-label="بستن">×</button><h3>میانبر جدید</h3><label>نام سایت<input id="siteName" placeholder="مثلاً دیوار" required></label><label>آدرس سایت<input id="siteUrl" type="url" placeholder="https://example.com" required></label><div class="dialog-actions"><button class="cancel">انصراف</button><button class="save" id="saveShortcut" type="button">ذخیره میانبر</button></div></form></dialog>
-  <dialog id="aboutDialog"><div class="dialog-card about"><button class="dialog-close" id="closeAbout">×</button><div class="mini-mark">✦</div><h3>آریا · ARYA</h3><p>یک تجربه جست‌وجوی ساده، مدرن و الهام‌گرفته از فرهنگ ایرانی. آریا در حال توسعه است؛ این نسخه یک نمونه رابط کاربری و صفحه شروع وب محسوب می‌شود.</p><small>نسخه ۰.۱ · Open-source concept</small></div></dialog>
-  <script src="assets/js/app.js"></script>
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-art" aria-hidden="true"><div class="sun-disc"></div><div class="column col-one"></div><div class="column col-two"></div><div class="mountains"></div></div>
+        <div class="hero-copy"><span class="eyebrow"><i></i> آینده جستجو، از ایران</span><h1>ایران <span>سرچ</span></h1><p>جستجوی هوشمند، با طعم ایران</p></div>
+        <div class="search-zone" id="search">
+          <div class="search-tabs" role="tablist"><button class="tab active" data-type="all">همه</button><button class="tab" data-type="images">تصاویر</button><button class="tab" data-type="videos">ویدیو</button><button class="tab" data-type="news">اخبار</button><button class="tab" data-type="maps">نقشه</button></div>
+          <form class="search-form" id="searchForm"><button type="button" class="search-icon" aria-label="جستجو">⌕</button><input id="searchInput" autocomplete="off" placeholder="هر آنچه می‌خواهید جستجو کنید..." /><button type="button" class="voice-btn" title="جستجوی صوتی">♩</button><button class="search-submit" type="submit">جستجو</button></form>
+          <div class="search-meta"><span>جستجوی امن و خصوصی</span><span class="meta-dot"></span><span>پشتیبانی از زبان فارسی</span><button type="button" id="advancedBtn">جستجوی پیشرفته <span>↗</span></button></div>
+        </div>
+        <div class="quick-links" aria-label="دسترسی سریع"><a href="#widgets"><span class="quick-icon weather">☼</span><b>آب‌وهوا</b><small>تهران · ۲۳°</small></a><a href="#widgets"><span class="quick-icon map">⌖</span><b>نقشه ایران</b><small>کشف مکان‌ها</small></a><a href="#news"><span class="quick-icon book">▤</span><b>دانشنامه</b><small>دانش ایرانی</small></a><a href="#news"><span class="quick-icon news">◈</span><b>خبر روز</b><small>تازه‌ترین‌ها</small></a><a href="#more"><span class="quick-icon market">♢</span><b>بازار</b><small>قیمت لحظه‌ای</small></a><a href="#more"><span class="quick-icon post">✉</span><b>پست ایران</b><small>رهگیری مرسوله</small></a></div>
+      </section>
+
+      <section class="workspace container" id="resultsArea">
+        <div class="content-column">
+          <div class="section-heading"><div><span class="eyebrow">نتایج جستجو</span><h2 id="resultsTitle">پیشنهادهای امروز برای شما</h2></div><div class="view-switch"><button class="view-btn active" data-view="split" title="نمای ترکیبی">▦</button><button class="view-btn" data-view="full" title="نمای کامل">☰</button></div></div>
+          <div class="results-panel hidden" id="resultsPanel"><div class="result-top"><span id="resultType">همه نتایج</span><small id="resultCount">حدود ۱۲,۳۰۰,۰۰۰ نتیجه</small></div><article class="result-item"><div class="result-source"><span class="source-icon">✦</span><span>fa.wikipedia.org</span><b>⌄</b></div><h3>فناوری اطلاعات چیست؟ | دانشنامه آزاد</h3><p>فناوری اطلاعات مجموعه‌ای از ابزارها و منابع برای ایجاد، ذخیره و تبادل اطلاعات است. با ایران سرچ بیشتر بدانید.</p></article><article class="result-item"><div class="result-source"><span class="source-icon blue">ای</span><span>irandoc.ac.ir</span><b>⌄</b></div><h3>مرکز اطلاعات علمی ایران | پژوهش و نوآوری</h3><p>آخرین یافته‌های علمی، اخبار فناوری و منابع معتبر فارسی در دسترس شماست.</p></article><div class="pagination"><button class="selected">۱</button><button>۲</button><button>۳</button><button>۴</button><button>۵</button><button>›</button></div></div>
+          <div class="news-section" id="news"><div class="section-heading compact"><div><span class="eyebrow">نبض ایران</span><h2>اخبار و تازه‌ها</h2></div><a class="text-link" href="#news">مشاهده همه <span>←</span></a></div><div class="news-grid"><article class="news-card"><div class="news-image satellite"><span>اخبار فناوری</span></div><div class="news-body"><small>۵ ساعت پیش · علم و فناوری</small><h3>ماهواره ایرانی با موفقیت در مدار قرار گرفت</h3><p>گامی تازه برای آینده فضایی ایران و توسعه فناوری‌های بومی.</p></div></article><article class="news-card"><div class="news-image windows"><span>تکنولوژی</span></div><div class="news-body"><small>دیروز · جهان</small><h3>مایکروسافت از نسل جدید ویندوز رونمایی کرد</h3><p>تجربه‌ای متفاوت با تمرکز بر هوش مصنوعی و بهره‌وری.</p></div></article><article class="news-card"><div class="news-image ai"><span>هوش مصنوعی</span></div><div class="news-body"><small>۲ روز پیش · نوآوری</small><h3>رشد چشمگیر استفاده از هوش مصنوعی در سال جدید</h3><p>هوش مصنوعی در مسیر تبدیل شدن به دستیار روزمره ماست.</p></div></article></div></div>
+        </div>
+        <aside class="sidebar" id="profilePanel"><div class="user-card"><div class="user-card-top"><span class="avatar large">ک</span><div><strong>کیان رحمتی</strong><small>@kiyan-rahmati</small></div><button class="icon-btn close-profile" title="بستن">×</button></div><div class="user-stats"><span><b>۲۴۸</b> جستجو</span><span><b>۱۲</b> ذخیره‌شده</span></div></div><div class="side-menu"><a href="#more"><span>♙</span> پروفایل من <b>›</b></a><a href="#more"><span>⚙</span> تنظیمات <b>›</b></a><a href="#more"><span>◷</span> تاریخچه جستجو <b>›</b></a><a href="#more"><span>♡</span> علاقه‌مندی‌ها <b>›</b></a><div class="menu-divider"></div><div class="side-toggle"><span>☾</span> حالت شب <label class="switch"><input id="sideTheme" type="checkbox"><i></i></label></div><a class="logout" href="#top"><span>↪</span> خروج از حساب</a></div><div class="quote-card"><span>❞</span><p>دانش، میراثی‌ست که با جستجو زنده می‌ماند.</p><small>ایران سرچ</small></div></aside>
+      </section>
+
+      <section class="tools-section container" id="widgets"><div class="tool-card advanced"><div class="tool-header"><span class="tool-icon">⌘</span><div><span class="eyebrow">دقیق‌تر پیدا کن</span><h2>جستجوی پیشرفته</h2></div></div><div class="advanced-form"><label>نوع محتوا<select><option>همه موارد</option><option>مقالات</option><option>تصاویر</option></select></label><label>زبان<select><option>هر زبانی</option><option>فارسی</option><option>انگلیسی</option></select></label><label>از تاریخ<input type="text" placeholder="۱۴۰۳/۰۱/۰۱"></label><label>تا تاریخ<input type="text" placeholder="۱۴۰۳/۱۲/۲۹"></label><button class="gold-btn" id="advancedSearch">اعمال فیلتر <span>←</span></button></div></div><div class="tool-card design-system" id="more"><div class="tool-header"><span class="tool-icon palette">✦</span><div><span class="eyebrow">هویت بصری</span><h2>سیستم طراحی</h2></div></div><div class="palette-row"><span style="--swatch:#0b0f19"><b>#0B0F19</b><small>Midnight</small></span><span style="--swatch:#17233a"><b>#17233A</b><small>Royal Navy</small></span><span style="--swatch:#d4af37"><b>#D4AF37</b><small>Persian Gold</small></span><span style="--swatch:#48a9d9"><b>#48A9D9</b><small>Azure</small></span></div><div class="type-sample"><div><b>Aa</b><span>Vazirmatn</span></div><div><strong>ایران سرچ</strong><small>Regular · Medium · Bold</small></div></div></div></section>
+    </main>
+    <footer class="footer"><div class="container footer-grid"><div class="footer-brand"><div class="brand"><span class="brand-mark"><span>𓂀</span></span><span><strong>ایران</strong><em>Search</em></span></div><p>جستجوی فراتر از مرزها،<br>با ریشه‌هایی در قلب ایران.</p></div><div><h4>دسترسی سریع</h4><a href="#top">خانه</a><a href="#search">تصاویر</a><a href="#news">اخبار</a><a href="#widgets">نقشه ایران</a></div><div><h4>راهنما و پشتیبانی</h4><a href="#more">درباره ما</a><a href="#more">حریم خصوصی</a><a href="#more">شرایط استفاده</a><a href="#more">تماس با ما</a></div><div class="footer-clock"><span>زمان محلی شما</span><strong id="clock">--:--:--</strong><small id="date">در حال بارگذاری...</small></div></div><div class="footer-bottom container"><span>© ۱۴۰۳ ایران سرچ. تمامی حقوق محفوظ است.</span><span>ساخته شده با <b>◆</b> برای ایران</span></div></footer>
+  </div>
+  <script src="assets/js/theme.js"></script><script src="assets/js/search.js"></script><script src="assets/js/widgets.js"></script><script src="assets/js/app.js"></script>
 </body></html>
